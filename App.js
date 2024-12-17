@@ -5,6 +5,7 @@ import * as SQLite from 'expo-sqlite';
 const App = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('')
   const [users, setUsers] = useState([]);
   const [db, setDb] = useState(null);
 
@@ -68,6 +69,12 @@ const App = () => {
           placeholder="Enter email"
           value={email}
           onChangeText={setEmail}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Enter Password"
+          value={password}
+          onChangeText={setPassword}
         />
         <Button title="Submit" onPress={handleSubmit} color="#6200ea" />
       </View>
